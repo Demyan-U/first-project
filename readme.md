@@ -170,18 +170,12 @@ Staging area также называют index (англ. «каталог») и
 ## Типичный жизненный цикл файла в Git
 
 ```mermaid
-flowchart TD
-
+flowchart TD;
 A[untracked(неотслеживаемый)] -- `git add` --> B{staged(в списке на коммит) + tracked};
-
-B -- `git commit` --> C{tracked(отслеживаемый)}
-
-C -- `Изменения` --> D{modified(измененный)}
-
-D -- `git add` --> B
-
-B -- `Изменения` --> D
-
+B -- `git commit` --> C{tracked(отслеживаемый)};
+C -- `Изменения` --> D{modified(измененный)};
+D -- `git add` --> B;
+B -- `Изменения` --> D;
 ```
 
 ## Как читать git status
