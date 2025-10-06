@@ -170,7 +170,7 @@ Staging area также называют index (англ. «каталог») и
 ## Типичный жизненный цикл файла в Git
 
 ```mermaid
-flowchart TD
+graph TD
 A[untracked(неотслеживаемый)]-->B{staged(в списке на коммит) + tracked};
 B-->C{tracked(отслеживаемый)}
 C-->D{modified(измененный)}
