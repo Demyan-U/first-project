@@ -172,15 +172,15 @@ Staging area также называют index (англ. «каталог») и
 ```mermaid
 flowchart TD;
 
-A[untracked(неотслеживаемый)] -- `git add` --> B{staged(в списке на коммит) + tracked};
+A[untracked(неотслеживаемый)] --> B{staged(в списке на коммит) + tracked};
 
-B -- `git commit` --> C{tracked(отслеживаемый)};
+B --> C{tracked(отслеживаемый)};
 
-C -- `Изменения` --> D{modified(измененный)};
+C --> D{modified(измененный)};
 
-D -- `git add` --> B;
+D --> B;
 
-B -- `Изменения` --> D;
+B --> D;
 
 ```
 
