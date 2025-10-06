@@ -171,11 +171,11 @@ Staging area также называют index (англ. «каталог») и
 
 ```mermaid
 flowchart TD
-A[untracked(неотслеживаемый)] -- `git add` --> B{staged(в списке на коммит) + tracked};
-B -- `git commit` --> C{tracked(отслеживаемый)}
-C -- `Изменения` --> D{modified(измененный)}
-D -- `git add` --> B
-B -- `Изменения` --> D
+A[untracked(неотслеживаемый)]-->B{staged(в списке на коммит) + tracked};
+B-->C{tracked(отслеживаемый)}
+C-->D{modified(измененный)}
+D-->B
+B-->D
 ```
 
 ## Как читать git status
